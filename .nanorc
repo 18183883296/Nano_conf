@@ -1,0 +1,54 @@
+# Remove some existing commands
+unbind ^\ all
+unbind ^O all
+
+# Sane keyboard shortcuts
+bind ^S savefile all
+bind ^Q exit all
+bind ^X cut all
+bind ^V paste all
+bind ^C copy all
+bind ^Z undo all
+bind ^Y redo  all
+bind ^G gotoline all
+bind ^F whereis all
+bind ^Q cancel yesno
+bind ^R replace all
+bind ^O suspend main
+
+# None of these are working
+bind ^/ comment all
+bind ^SPACE complete all
+bind ^\ browser all
+
+set tabstospaces    # 展开制表符为空格（如果需要的话）
+set tabsize 4       # 设置制表符宽度
+set autoindent      # 允许自动缩进
+set stateflags      # 更多状态标志和标题栏星号
+# set noconvert       # 不要转换 DOS/UNIX 换行符
+# set nohelp          # 不显示下面两行帮助（可以用M-X切换回来）
+# set emptyline       # 留空标题栏下方一行
+# set morespace       # 隐藏标题下的空白行，换取更多编辑空间
+set suspend         # 允许 ctrl-z 将 nano 置于后台
+set smarthome       # 第一次 Home 跳到行首非空字符，第二次到行首
+set mouse           # 允许鼠标
+set indicator        # 窗口右侧滚动条显示视区的位置及覆盖的缓冲区大小
+set linenumbers     # 显示行号（可以在编辑时 ALT-# 切换）
+# set backupdir "~/.backup/"  # 设置备份路径
+# set backup          # 保存文件时备份，备份文件后缀为波浪号（~）
+# set breaklonglines  # 当当前行变得过长时，自动对其进行硬换行
+set casesensitive   # 搜索区分大小写
+set multibuffer     # 使用 CTRL-r 读取文件时，默认读取到新缓冲区
+set nonewlines      # 不在文件末尾添加新行
+set positionlog
+set constantshow   # 在状态栏上持续显示光标位置
+set jumpyscrolling   # 滚动缓冲区内容每半屏而不是每行
+# set guidestripe number  # 在number列处设置宽度参考线
+# set stripecolor             # 设置宽度参考线的颜色
+# set saveonexit         # 退出时自动保存更改的缓冲区，不再提示
+set zap                 # 使用Backspace或Delete删除选取而不是单个字符
+
+include <filename>  # 加载额外配置，通常是 /usr/share/nano 下的各种语法文件
+include /usr/share/nano/crystal.nanorc
+include /usr/share/nano/c.nanorc
+include /usr/share/nano/ruby.nanorc
