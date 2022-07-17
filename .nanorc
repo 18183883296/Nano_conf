@@ -2,7 +2,6 @@
 unbind ^\ all
 unbind ^O all
 
-# Sane keyboard shortcuts
 bind ^S savefile all
 bind ^Q exit all
 bind ^X cut all
@@ -15,8 +14,8 @@ bind ^F whereis all
 bind ^Q cancel yesno
 bind ^R replace all
 bind ^O suspend main
-
-# None of these are working
+bind ^U formatter all
+bind ^W linter all
 bind ^/ comment all
 bind ^SPACE complete all
 bind ^\ browser all
@@ -46,7 +45,7 @@ set jumpyscrolling   # 滚动缓冲区内容每半屏而不是每行
 # set guidestripe number  # 在number列处设置宽度参考线
 # set stripecolor             # 设置宽度参考线的颜色
 # set saveonexit         # 退出时自动保存更改的缓冲区，不再提示
-set zap                 # 使用Backspace或Delete删除选取而不是单个字符
+set zap                 # 使用Backspace或Delete删除选区而不是单个字符
 
 include <filename>  # 加载额外配置，通常是 /usr/share/nano 下的各种语法文件
 include /usr/share/nano/crystal.nanorc
