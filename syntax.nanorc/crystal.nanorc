@@ -2,7 +2,7 @@
 
 syntax crystal "\.cr$"
 header "^#!.*crystal"
-magic "Crystal script"
+magic "Crystal"
 comment "# "
 
 formatter crystal tool format
